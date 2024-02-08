@@ -9,5 +9,14 @@ router.post("/add",async(req,res)=>{
     res.json({
         status:"success"
     })
+
+    router.get("/viewall",async(req,res)=>{
+
+        let data=await foodmodel.find()
+        res.json(data)      
+    
+    })
+
+
 })
 module.exports=router
